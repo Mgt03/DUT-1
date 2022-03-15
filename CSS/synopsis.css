@@ -1,0 +1,27 @@
+strong, em{
+	font-weight : bold;
+}
+.liens{
+	position:relative;
+	text-align: right;
+}
+a.source{
+	color:white;
+	text-decoration: none;
+	font-weight: 500;
+	font-size:1em;
+	line-height: 40px;
+}
+a.source:hover{
+	font-weight: 1em;
+	text-decoration: underline;
+	background-color: white;
+	color:black;
+	border-radius:15px;
+	padding:5px;
+}
+
+.corpsBiographie{
+	display: flex;
+	flex-direction: column;
+}

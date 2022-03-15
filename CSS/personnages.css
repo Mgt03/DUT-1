@@ -1,0 +1,17 @@
+section table img{
+	width:80px;
+}
+table, tr td, tr th{
+	margin:0 auto;
+	border:2px grey solid;
+	border-collapse: collapse;
+}
+
+tr.ligne, td.ligne{
+	border-bottom:5px white solid;
+	padding:10px 0;
+}
+
+tr th{
+	text-align: center;
+}

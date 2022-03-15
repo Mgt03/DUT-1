@@ -1,0 +1,21 @@
+article li a{
+	color : white;
+	padding: 4px 4px;
+}
+
+article.saison{
+	text-align: center;
+}
+
+article.saison li{
+	margin-left: -40px;
+}
+
+ul{
+	list-style-type: none;
+	line-height:30px;
+}
+
+ul li{
+	margin-left:-10px;
+}

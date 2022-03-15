@@ -1,0 +1,33 @@
+/*seance 2
+
+table, th, td{
+	border: 1px black solid;
+	text-align: center;
+	border-collapse: collapse;
+}
+div{
+	width: 80%;
+}
+
+div img{
+	float:left;
+}
+p #en_dessous{
+	clear: left;
+
+
+}*/
+
+/*seance 3*/
+
+#container{
+	margin-left: 100px;
+}
+#container .idem{
+	padding: 10px;
+}
+
+#container figure{
+	position:relative;
+	left: 50px;
+}

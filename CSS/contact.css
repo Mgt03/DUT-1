@@ -1,0 +1,24 @@
+form{
+	display:flex;
+	flex-direction: column;
+	flex:1;
+	justify-content: center;
+}
+form input, form select, form textarea{
+	text-align: center;
+	width:50%;
+	margin: 10px auto;
+}
+form label{
+	margin:10px auto;
+}
+form input.radio, form label.radio{
+	width:auto;
+}
+.ligne{
+	width:auto;
+	display: inline-block;
+	text-align: center
+	
+}
+.ligne >label, .ligne>input{}

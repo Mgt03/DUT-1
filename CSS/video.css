@@ -1,0 +1,11 @@
+section.video figure figcaption{
+	position: relative;
+	padding-top:50px;
+	float: left;
+	width:66%;
+}
+
+section.video figure video{
+	position: relative;
+	width:34%;
+}

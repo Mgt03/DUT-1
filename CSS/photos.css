@@ -1,0 +1,40 @@
+section{
+	display: flex;
+	flex:1;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+} 
+section img{
+	width:100vh;
+}
+figure figcaption{
+	text-align: center;
+}
+
+section > figure{}
+section > .nav{}
+.nav{
+	display: flex;
+	flex-direction: row-reverse;
+	width:100vh;
+	justify-content: center;
+}
+
+.nav > .bouton_apres{}
+
+.nav > .bouton_avant{}
+
+.bouton_apres{
+	display: flex;
+	flex-direction: row;
+	width:100vh;
+	justify-content: flex-end;
+}
+
+.nav > .bouton_avant{
+	display: flex;
+	flex-direction: row;
+	width:100vh;
+	justify-content: flex-start;
+}

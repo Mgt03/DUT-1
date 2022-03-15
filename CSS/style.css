@@ -1,0 +1,398 @@
+@font-face{
+	font-family: 'sunflower';
+	src:url('sunflower.eot');
+	src:url('sunflower.otf') format('truetype'),
+		url('sunflower.wotff') format('woff'),
+		url('sunflower.svg') format('svg');
+	font-family: 'style';
+	src:url('cream_cake.eot');
+	src:url('cream_cake.otf') format('truetype'),
+		url('cream_cake.woff') format('woff'),
+		url('cream_cake.woff2') format('woff2'),
+		url('cream_cake.svg') format('svg');
+	font-family: 'autre';
+	src:url('birds_of_paradise.eot');
+	src:url('birds_of_paradise.otf') format('truetype'),
+		url('birds_of_paradise.woff') format('woff'),
+		url('birds_of_paradise.woff2') format('woff2'),
+		url('birds_of_paradise.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+body{
+	display:flex;
+	flex-direction: row;
+	background-image: url("../vrac/background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	text-align:justify;
+	min-height: 100vh;
+	counter-reset: section;
+	margin: 0;
+	font-size : 1.2em;
+	font-family: 'style';
+}
+
+body >.document{
+	display:flex;
+	flex-direction:column;
+	background-image: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0)50%, rgba(0,0,0,0.3));
+	background-color: rgba(0,0,0,0.4);	
+	min-height: 100vh;	
+	color: white;
+	margin: 0 10%;	
+	padding: 10px 30px;
+	border-radius: 20px;
+	width:100%;
+	
+}
+
+
+/*-------------------------------------En tête----------------------------------------------------------------------------------------------------------*/
+
+
+.document > header{
+	padding-bottom: 20px;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+header h1#titre{
+	text-shadow: 2px 2px  rgb(100,100,100);
+	text-align:center;
+	color:rgb(196,230,234);
+	font-size:3em;
+	font-family:'autre';
+}
+
+/*----------bandeau de navigation -----------------*/
+@media screen and (min-width: 900px){
+header nav{
+	text-align: center;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-around;   
+	flex:1;
+	width: 100%;																					
+}
+.reseau a{
+	color: white;	
+	text-decoration: none;
+	margin:10px 0;
+	padding: 8px;
+}
+
+.reseau a.ytb{
+	border:3px red solid;
+	border-radius: 15px;
+}
+
+.reseau a.ytb:hover{
+	/*background-color: rgba(255,0,0,0.5);*/
+	color:rgba(0,0,0,0);
+	background-image: url("../vrac/youtube.png");
+	background-size: cover;
+	background-position: center;
+	width: 75px;
+	height: 75px;
+	transition : 1s;
+}
+
+.reseau a.twitter{	
+	border:3px blue solid;
+	border-radius: 15px;
+}
+
+.reseau a.twitter:hover{
+	/*background-color: rgba(0,0,255,0.5);*/
+	color:rgba(0,0,0,0);
+	background-image: url("../vrac/twitter.png");
+	background-size: cover;	
+	background-position: center;
+	width: 50px;
+	height: 50px;
+	transition : 1s;
+}
+}
+@media screen and (max-width: 900px){
+header nav{
+	text-align: center;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:space-around;   
+	flex:1;
+	width: 100%;																					
+}
+.reseau a.ytb{
+	/*background-color: rgba(255,0,0,0.5);*/
+	color:rgba(0,0,0,0);
+	background-image: url("../vrac/youtube.png");
+	background-size: cover;
+	background-position: center;
+	width: 50px;
+	height: 50px;
+}
+.reseau a.twitter{
+	/*background-color: rgba(0,0,255,0.5);*/
+	color:rgba(0,0,0,0);
+	background-image: url("../vrac/twitter.png");
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+}
+}
+
+header nav:hover{
+}
+
+nav .ici{
+	padding:20px;
+	text-align: center;
+	border-bottom: 5px orange solid;
+	color:white	;
+}
+
+nav #ici{
+	padding:20px;
+	text-align: center;
+	border-bottom: 5px orange solid;
+	color:white	;
+}
+
+nav a, .dropdown{ 
+	color:white;
+	padding: 20px;
+	text-decoration: none;
+	font-weight: 500;
+	font-size:1.2em;
+}
+
+nav a:hover, nav .dropdown:hover{
+	padding:20px;
+	text-align: center;
+	border-bottom: 5px orange solid;
+	color:white	;
+	transition: border-bottom 1s;
+}
+
+nav .dropdown-content{
+	display:none;
+	width:180px;
+	position:absolute;
+	background-color: rgba(0,0,0,0.85);
+	margin-top:25px;
+	margin-left:-50px;
+	padding:0;
+}
+
+nav .dropdown-content a{
+	display:block;
+	border: none;
+	color:white;
+	flex: 1;
+}
+
+/*nav .dropdown-content a:first-child{
+	border-top: 5px orange solid;
+}*/
+
+
+nav .dropdown-content a:hover {
+	border-bottom: 5px orange solid;
+	padding:20px;
+	border-top: none;
+}
+
+nav .dropdown:hover .dropdown-content{
+	display:block;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+.reseau{
+	text-align: center;
+	width:10%;
+}
+
+body > .reseau{
+	display: flex;
+	flex-direction: column;
+	position:fixed;
+	align-items: center;
+	padding:10px 5px;
+}
+
+.reseau > .reseau a.ytb{
+}
+
+.reseau > .reseau a.twitter{	
+}
+
+img.presentation{
+	display:block;
+	margin: 10px auto;
+	width:50%;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------Corps de la page --------------------------------------------------------------------------*/
+.corps{
+	display: flex;
+	flex-direction: column;
+}
+.corps > form, .corps > footer{}
+
+
+.document > .corps, .document > .corpsAccueil, .documentBiographie{
+	flex-grow: 1;
+}
+
+
+
+
+
+
+.nav{
+	position:relative;
+	text-align: right;
+	padding: 10px;
+	margin : 10px;
+}
+.nav a{
+	/*background-image: linear-gradient(to bottom left, black,white,grey,white,black);*/
+	border: 3px orange solid;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+.nav a:hover{
+	padding: 10px;
+	background-color:orange;
+	color:black;
+	border-radius: 10px;
+	transition: background-color 2s, color 2s;
+}
+
+hr{
+	text-align:right;
+	border-radius: 15px;
+	color: black;
+	padding-right: 5px;
+	background-color: grey;
+	font-weight: bold;
+	font-family: calibri;
+}
+
+hr.nombre::before {
+  counter-increment: section;
+  content: counter(section);
+}
+
+footer{
+	bottom: 0;
+	width:90%;
+}
+
+.document > footer{
+}
+
+footer p{
+	padding-top:;
+	font-size:0.8em;
+}
+
+footer hr{
+	border-radius: 20px;
+	background-color: black;
+	color:white;
+	text-align: center;
+}
+
+footer hr:after{
+	height: 5px;
+	background-color: black;
+	color:white;
+	content: 'Bas de page';
+	position: relative;
+}
+
+/*--------Navigation dans les photos --------------*/
+
+.bouton_apres{
+	margin:20px;
+}
+
+a.suivant{
+background-color: rgba(0,0,0,.8);
+border:3px orange solid;
+border-radius: 10px;
+padding:10px;
+color:white;
+text-decoration: none;
+}
+
+a.suivant:hover{
+	padding:10px;
+	color:black;
+	text-decoration: none;
+	background-color: orange;
+	transition: background-color 1s, color 1s;
+}
+
+.bouton_avant{
+margin : 20px ;
+}
+
+a.precedent{
+background-color: rgba(0,0,0,.8);
+border:3px orange solid;
+border-radius: 10px;
+padding:10px;
+color:white;
+text-decoration: none;
+}
+
+a.precedent:hover{
+	padding:10px;
+	color:black;
+	text-decoration: none;
+	background-color: orange;
+	transition: background-color 1s, color 1s;
+}
+
+.retour{
+	margin-top: 100vh;
+	margin-left: 10px;
+	
+}
+
+.retour img{	
+	width: 50px;
+}
+
+img.hover{
+	opacity :0;
+	position: sticky;
+	top:90vh;
+}
+
+img.before{
+	opacity : 1;
+	position: sticky;
+	top:90vh;
+}
+
+.retour a:hover .hover{
+	opacity: 1;
+	transition: 1s;
+}
+
+.retour a:hover .before{
+	opacity: 0;
+	transition: opacity 1s;
+}
